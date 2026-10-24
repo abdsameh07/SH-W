@@ -4,9 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wedding Invitation | Abdul Sameh & Hasina</title>
-<meta name="description" content="With the blessings of Allah, we invite you to celebrate the wedding of Abdul Sameh &amp; Hasina on 8 November 2026.">
-<meta property="og:title" content="Wedding Invitation | Abdul Sameh &amp; Hasina">
-<meta property="og:description" content="With the blessings of Allah, we invite you to celebrate our wedding.">
+<meta name="description" content="You are invited to celebrate the wedding of Abdul Sameh &amp; Hasina — Sunday, 8 November 2026, Padappengad.">
+<meta name="theme-color" content="#22324a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="You are invited — Abdul Sameh &amp; Hasina">
+<meta property="og:description" content="Sunday, 8 November 2026 · Padappengad. Tap to open your invitation.">
+<!-- IMPORTANT: after uploading to GitHub, change this to the full link, e.g. https://YOURNAME.github.io/YOURREPO/og-image.jpg -->
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="You are invited to celebrate the wedding of Abdul Sameh &amp; Hasina, 8 November 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:wght@400&display=swap">
 <style>
 :root{--navy:#22324a;--navy2:#2e4262;--gold:#d3b676;--ivory:#f6efe3;--blush:#e9c4c0;--rose:#8f5560;--sb:env(safe-area-inset-bottom,0px)}
@@ -51,18 +61,25 @@ section{min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:co
 .cd b{display:block;font-size:1.3rem;font-weight:500;letter-spacing:0;color:var(--gold);line-height:1.1}
 body.open .cd{opacity:1}
 /* gate */
-#gate{position:fixed;inset:0;z-index:10;cursor:pointer;transition:visibility 0s 1.4s}
+#gate{position:fixed;inset:0;z-index:10;cursor:pointer;transition:visibility 0s 1.5s}
 #gate.gone{visibility:hidden;pointer-events:none}
-.pn{position:absolute;top:0;bottom:0;width:50.5%;background:radial-gradient(120% 70% at 50% 20%,var(--navy2),var(--navy));transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
-.pn.l{left:0;border-right:1px solid var(--gold)}.pn.r2{right:0;border-left:1px solid var(--gold)}
-.pn::after{content:"";position:absolute;inset:14px;border:1px solid var(--gold);opacity:.5}
+.pn{position:absolute;top:0;bottom:0;width:50.5%;background:radial-gradient(120% 85% at 50% 32%,var(--navy2),var(--navy));background-size:198% 100%;transition:transform 1.5s cubic-bezier(.7,0,.2,1)}
+.pn.l{left:0;background-position:left}.pn.r2{right:0;background-position:right}
 .gone .l{transform:translateX(-102%)}.gone .r2{transform:translateX(102%)}
-.gc{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ivory);transition:opacity .6s}
+.gc{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(30px + env(safe-area-inset-top,0px)) 30px calc(30px + var(--sb));color:var(--ivory);transition:opacity .6s}
+.gc::before{content:"";position:absolute;inset:max(16px,env(safe-area-inset-top,0px)) 16px calc(16px + var(--sb));border:1px solid var(--gold);opacity:.3;pointer-events:none}
+.gc::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(transparent,rgba(211,182,118,.5) 10%,rgba(211,182,118,.5) 22%,transparent 32%,transparent 68%,rgba(211,182,118,.5) 78%,rgba(211,182,118,.5) 90%,transparent);pointer-events:none}
 .gone .gc{opacity:0}
-.seal{width:96px;height:96px;border-radius:50%;margin:22px 0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#e6cf98,#b3924f 70%);box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 0 0 5px rgba(255,255,255,.12);font-family:Allura,cursive;font-size:2.1rem;color:#5b4320;animation:beat 2.4s ease-in-out infinite}
-@keyframes beat{50%{transform:scale(1.07)}}
-.tap{font-size:.76rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);animation:fade 2s ease-in-out infinite}
+.gc>*{position:relative;z-index:1}
+.seal{position:relative;width:clamp(84px,13vmin,116px);height:clamp(84px,13vmin,116px);border-radius:50%;margin:clamp(26px,5vmin,44px) 0 clamp(22px,4vmin,34px);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#ecd9a6,#b3924f 72%);box-shadow:0 12px 34px rgba(0,0,0,.45),inset 0 0 0 4px rgba(255,255,255,.14);font-family:Allura,cursive;font-size:clamp(1.9rem,4.4vmin,2.6rem);color:#5b4320}
+.seal::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid var(--gold);opacity:.55}
+.seal::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid var(--gold);animation:ripple 3s ease-out infinite}
+@keyframes ripple{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+.gn{font-size:clamp(2rem,6.4vw,3.3rem);color:var(--ivory);white-space:nowrap}
+.gn span{color:var(--gold);font-size:.8em;margin:0 .1em}
+.tap{margin-top:clamp(26px,5vmin,44px);font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);animation:fade 2.4s ease-in-out infinite}
 @keyframes fade{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.seal::after,.tap{animation:none}}
 </style>
 </head>
 <body class="lock">
@@ -71,12 +88,10 @@ body.open .cd{opacity:1}
 <div id="gate" role="button" tabindex="0" aria-label="Tap to open the invitation">
 <div class="pn l"></div><div class="pn r2"></div>
 <div class="gc">
-<p class="ar" lang="ar" dir="rtl" style="font-size:1.35rem">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+<p class="ar" lang="ar" dir="rtl" style="font-size:1.15rem;opacity:.9">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
 <div class="seal">A&amp;H</div>
-<p class="sm">The Wedding of</p>
-<p class="script" style="font-size:2.5rem;margin-top:10px">Abdul Sameh<br><span style="font-size:1.5rem;color:var(--gold)">&amp;</span><br>Hasina</p>
-<p style="margin-top:14px;font-style:italic;color:var(--blush)">8th November 2026 · 27 Jumada al-Awwal 1448</p>
-<p class="tap" style="margin-top:30px">Tap to open</p>
+<p class="script gn">Abdul Sameh <span>&amp;</span> Hasina</p>
+<p class="tap">Tap to open</p>
 </div></div>
 
 <div class="cd" id="cd" aria-label="Countdown to the wedding"></div>
